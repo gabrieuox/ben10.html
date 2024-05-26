@@ -1,0 +1,65 @@
+/* love.css */
+body {
+    background-color: #093d05; /* Cinza claro */
+    font-family: 'Arial', sans-serif;
+    color: #ffffff; /* Cinza escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: 
+    #ffffff; /* Vermelho */
+  }
+  
+  p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+  }
+  
+  img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 30px;
+  }
+  
+  .hearts-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1; /* Colocar por trás dos outros elementos */
+  }
+  
+  .heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #09a01d; /* Vermelho */
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: heartAnimation 3s linear infinite;
+  }
+  
+  @keyframes heartAnimation {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(10px, -10px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }

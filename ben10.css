@@ -1,0 +1,112 @@
+body {
+    background-color: #000; /* Preto */
+    font-family: 'Arial', sans-serif;
+    color: #fff; /* Branco */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Remove scrollbar */
+    animation: backgroundAnimation 5s linear infinite; /* Animação de fundo */
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .image-container {
+    width: 300px;
+    margin-bottom: 40px; /* Mais espaço entre a imagem e o vídeo */
+    animation: pulse 2s infinite;
+  }
+  
+  .image-container img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #fff;
+  }
+  
+  .video-container {
+    width: 600px;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #fff;
+    animation: glow 2s infinite alternate;
+  }
+  
+  .video-container iframe {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .button-container {
+    margin-top: 40px; /* Mais espaço entre o vídeo e o botão */
+    display: none; /* Oculta o botão inicialmente */
+  }
+  
+  .button {
+    background-color: #00ff00; /* Verde */
+    color: #fff;
+    padding: 15px 30px; /* Aumenta o tamanho do botão */
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    animation: glow 2s infinite alternate; /* Usar a animação do vídeo */
+    box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00; /* Stroke verde */
+    transition: transform 0.2s ease; /* Transição de transformação */
+  }
+  
+  .button:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do botão ao passar o mouse */
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 10px #fff;
+    }
+    50% {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #fff;
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 10px #fff;
+    }
+  }
+  
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 10px #00ff00; /* Verde */
+    }
+    50% {
+      box-shadow: 0 0 20px #ff0000; /* Vermelho */
+    }
+    100% {
+      box-shadow: 0 0 10px #00ff00; /* Verde */
+    }
+  }
+  
+  @keyframes backgroundAnimation {
+    0% {
+      background-color: #006400; /* Verde escuro */
+    }
+    25% {
+      background-color: #008000; /* Verde */
+    }
+    50% {
+      background-color: #006400; /* Verde escuro */
+    }
+    75% {
+      background-color: #008000; /* Verde */
+    }
+    100% {
+      background-color: #006400; /* Verde escuro */
+    }
+  }
