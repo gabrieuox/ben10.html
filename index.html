@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ben 10 Website</title>
+  <link rel="stylesheet" href="ben10.css">
+</head>
+<body>
+  <div class="container">
+    <div class="image-container">
+      <img src="ben10_logo.png" alt="Ben 10 Logo">
+    </div>
+    <div class="video-container">
+      <video controls width="600" height="350">
+        <source src="ben10.mp4" type="video/mp4">
+        Seu navegador não suporta a tag de vídeo.
+      </video>
+    </div>
+    <div class="button-container" id="buttonContainer">
+      <a href="love.html" class="button">Clique Aqui</a>
+    </div>
+  </div>
+
+  <script>
+    // Aparece o botão após 20 segundos
+    const buttonContainer = document.getElementById('buttonContainer');
+    setTimeout(() => {
+      buttonContainer.style.display = 'block';
+    }, 20000);
+  </script>
+</body>
+</html>
